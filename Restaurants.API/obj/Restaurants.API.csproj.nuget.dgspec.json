@@ -1,0 +1,276 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/Restaurants.API.csproj": {}
+  },
+  "projects": {
+    "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/Restaurants.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/Restaurants.API.csproj",
+        "projectName": "Restaurants.API",
+        "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/Restaurants.API.csproj",
+        "packagesPath": "/Users/andrewtantsiura/.nuget/packages/",
+        "outputPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andrewtantsiura/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj": {
+                "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj"
+              },
+              "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj": {
+                "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj",
+        "projectName": "Restaurants.Application",
+        "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj",
+        "packagesPath": "/Users/andrewtantsiura/.nuget/packages/",
+        "outputPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andrewtantsiura/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Domain/Restaurants.Domain.csproj": {
+                "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Domain/Restaurants.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Domain/Restaurants.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Domain/Restaurants.Domain.csproj",
+        "projectName": "Restaurants.Domain",
+        "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Domain/Restaurants.Domain.csproj",
+        "packagesPath": "/Users/andrewtantsiura/.nuget/packages/",
+        "outputPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andrewtantsiura/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj",
+        "projectName": "Restaurants.Infrastructure",
+        "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj",
+        "packagesPath": "/Users/andrewtantsiura/.nuget/packages/",
+        "outputPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/andrewtantsiura/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj": {
+                "projectPath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.20, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.410/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MazF51nokSbfkiGs3LypahgmzstRgO9d58e1XDSXuYL9KIngNA7TubZR084Nfjxu6mqZSxDeaMI7a0PruK5XVA==",
+  "success": true,
+  "projectFilePath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/andrewtantsiura/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.1/microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.1/microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
