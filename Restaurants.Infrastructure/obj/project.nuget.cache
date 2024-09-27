@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KHh3M9IP8rWmeHP9urlNdsqyounA4uNi7eKbo1IruEEk5zCZA7NznRlLVoaD26OyNEyEuMiTwnziP486whZpBA==",
+  "dgSpecHash": "m0IrUycyvB67k3KGSokLtX2dfYaY/oV12SeZREqTCnkp2eTUC0oA8lzaV5ugA9FnNrmaFkNbrqtdqWnlAOviZw==",
   "success": true,
   "projectFilePath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Infrastructure/Restaurants.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "/Users/andrewtantsiura/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/andrewtantsiura/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/andrewtantsiura/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/andrewtantsiura/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/andrewtantsiura/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/andrewtantsiura/.nuget/packages/microsoft.data.sqlclient/5.1.5/microsoft.data.sqlclient.5.1.5.nupkg.sha512",

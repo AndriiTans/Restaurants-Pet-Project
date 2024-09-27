@@ -16,6 +16,8 @@
     <None Remove="Dishes\" />
     <None Remove="Dishes\Dtos\" />
     <None Remove="Restaurants\Validators\" />
+    <None Remove="Restaurants\Commands\" />
+    <None Remove="Restaurants\Commands\CreateRestaurant\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Restaurants\" />
@@ -24,10 +26,13 @@
     <Folder Include="Dishes\" />
     <Folder Include="Dishes\Dtos\" />
     <Folder Include="Restaurants\Validators\" />
+    <Folder Include="Restaurants\Commands\" />
+    <Folder Include="Restaurants\Commands\CreateRestaurant\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 </Project>
