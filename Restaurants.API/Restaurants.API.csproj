@@ -22,10 +22,4 @@
         <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     </ItemGroup>
-    <ItemGroup>
-      <None Remove=".gitignore" />
-    </ItemGroup>
-    <ItemGroup>
-      <Compile Include=".gitignore" />
-    </ItemGroup>
 </Project>
