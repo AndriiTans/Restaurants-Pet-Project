@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Microsoft.Extensions.Logging;
 using Restaurants.Application.Restaurants.Dtos;
 using Restaurants.Domain.Entities;
@@ -10,11 +11,23 @@ namespace Restaurants.Application.Restaurants
     {
         private IRestaurantsRepository _restaurantsRepository;
         private ILogger<RestaurantsService> _logger;
+        private IMapper _mapper;
 
-        public RestaurantsService(IRestaurantsRepository restaurantsRepository, ILogger<RestaurantsService> logger)
+        public RestaurantsService(IRestaurantsRepository restaurantsRepository, ILogger<RestaurantsService> logger, IMapper mapper)
         {
             _restaurantsRepository = restaurantsRepository;
             _logger = logger;
+            _mapper = mapper;
+        }
+
+        public async Task<int> Create(CreateRestaurantDto dto)
+        {
+
+            var restaurant = _mapper.Map<Restaurant>(dto);
+
+            int id = await _restaurantsRepository.Create(restaurant);
+
+            return id;
         }
 
         public async Task<IEnumerable<RestaurantDto>> GetAllRestaurants()
@@ -22,7 +35,9 @@ namespace Restaurants.Application.Restaurants
             var restaurants = await _restaurantsRepository.GetAllAsync();
             _logger.LogInformation("Getting all restaurants");
 
-            var restaurantsDtos = restaurants.Select(RestaurantDto.FromEntity);
+            // we are using IMapper instead
+            //var restaurantsDtos = restaurants.Select(RestaurantDto.FromEntity);
+            var restaurantsDtos = _mapper.Map<IEnumerable<RestaurantDto>>(restaurants);
 
             return restaurantsDtos!;
         }
@@ -33,7 +48,9 @@ namespace Restaurants.Application.Restaurants
 
             var restaurant = await _restaurantsRepository.GetByIdAsync(id);
 
-            var restaurantDto = RestaurantDto.FromEntity(restaurant);
+            // we are using IMapper instead
+            //var restaurantDto = RestaurantDto.FromEntity(restaurant);
+            var restaurantDto = _mapper.Map<RestaurantDto?>(restaurant);
 
             return restaurantDto;
         }

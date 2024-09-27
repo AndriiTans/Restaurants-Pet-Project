@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "MazF51nokSbfkiGs3LypahgmzstRgO9d58e1XDSXuYL9KIngNA7TubZR084Nfjxu6mqZSxDeaMI7a0PruK5XVA==",
+  "dgSpecHash": "R6QFVe++A+MWQrkHWo9ItR5rKlyhj2SCGtsipEnErsnFpm/EDTWKZ3s4RpXhtUL8nJO5DSHA/mQlROhC5QWpVw==",
   "success": true,
   "projectFilePath": "/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.Application/Restaurants.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/andrewtantsiura/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/andrewtantsiura/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.1/microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
-    "/Users/andrewtantsiura/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.1/microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512"
+    "/Users/andrewtantsiura/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.1/microsoft.extensions.logging.abstractions.8.0.1.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/Users/andrewtantsiura/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -107,3 +107,8 @@
 /Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll
 /Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/bin/Debug/net7.0/AutoMapper.dll
+/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/bin/Debug/net7.0/FluentValidation.dll
+/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/bin/Debug/net7.0/FluentValidation.AspNetCore.dll
+/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/bin/Debug/net7.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/andrewtantsiura/Documents/training/Restaurants/Restaurants.API/obj/Debug/net7.0/Restaurants.API.MvcApplicationPartsAssemblyInfo.cs
