@@ -20,6 +20,7 @@
     <None Remove="Restaurants\Queries\" />
     <None Remove="Restaurants\Queries\GetAllRestaurants\" />
     <None Remove="Restaurants\Queries\GetRestaurantById\" />
+    <None Remove="Restaurants\Commands\DeleteRestaurant\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Restaurants\" />
@@ -32,6 +33,7 @@
     <Folder Include="Restaurants\Queries\" />
     <Folder Include="Restaurants\Queries\GetAllRestaurants\" />
     <Folder Include="Restaurants\Queries\GetRestaurantById\" />
+    <Folder Include="Restaurants\Commands\DeleteRestaurant\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
