@@ -9,8 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-
 builder.Services.AddApplication();
 
 builder.Services.AddInfrastructure(builder.Configuration);
