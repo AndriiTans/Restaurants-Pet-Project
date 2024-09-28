@@ -1,6 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
+using Restaurants.Application.Restaurants.Commands.UpdateRestaurant;
 using Restaurants.Domain.Entities;
 
 namespace Restaurants.Application.Restaurants.Dtos
@@ -9,6 +10,9 @@ namespace Restaurants.Application.Restaurants.Dtos
     {
         public RestaurantsProfile()
         {
+
+            CreateMap<UpdateRestaurantCommand, Restaurant>();
+
             // Using CreateRestaurantCommand as a part of MediatR instead
             //CreateMap<CreateRestaurantDto, Restaurant>()
             CreateMap<CreateRestaurantCommand, Restaurant>()
