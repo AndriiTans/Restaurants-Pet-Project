@@ -5,6 +5,7 @@ namespace Restaurants.Domain.Repositories
 {
     public interface IRestaurantsRepository
     {
+        Task AddRangeAsync(IEnumerable<Restaurant> restaurants);
         Task<IEnumerable<Restaurant>> GetAllAsync();
         Task<Restaurant?> GetByIdAsync(int id);
         Task<int> Create(Restaurant entity);

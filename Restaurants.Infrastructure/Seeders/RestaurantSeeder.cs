@@ -33,7 +33,7 @@ namespace Restaurants.Infrastructure.Seeders
             {
                 new Restaurant()
                 {
-                    Name = "KFC",
+                    Name = "KFC111",
                     Category = "Fast Food",
                     Description = "KFC (short for Kentucky Fried Chicken) is an American fast food restaurant chain.",
                     ContactEmail = "contact@kfc.com",
