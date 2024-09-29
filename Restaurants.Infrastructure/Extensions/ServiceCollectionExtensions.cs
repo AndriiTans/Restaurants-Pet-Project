@@ -15,7 +15,11 @@ namespace Restaurants.Infrastructure.Extensions
         {
             var connectionString = configuration.GetConnectionString("RestaurantsDb");
             //var cString = "Server=localhost;Database=RestaurantsDb;User=root;Password=root;";
-            services.AddDbContext<RestaurantsDbContext>(options => options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 39))));
+            //services.AddDbContext<RestaurantsDbContext>(options =>
+            //options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 39))));
+            services.AddDbContext<RestaurantsDbContext>(options =>
+                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 39)))
+                    .EnableSensitiveDataLogging());
 
             services.AddScoped<IRestaurantSeeder, RestaurantSeeder>();
             services.AddScoped<IRestaurantsRepository, RestaurantsRepository>();

@@ -2,6 +2,7 @@
 using System.Text.Json;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Restaurants.API.Swagger.Examples.Restaurant;
 using Restaurants.Application.Restaurants;
 using Restaurants.Application.Restaurants.Commands.CreateRestaurant;
 using Restaurants.Application.Restaurants.Commands.DeleteRestaurant;
@@ -12,6 +13,7 @@ using Restaurants.Application.Restaurants.Queries;
 using Restaurants.Application.Restaurants.Queries.GetRestaurantById;
 using Restaurants.Application.Restaurants.Queries.SeedRestaurants;
 using Restaurants.Domain.Entities;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace Restaurants.API.Controllers
 {
@@ -31,7 +33,8 @@ namespace Restaurants.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        //public async Task<IActionResult> GetAll()
+        public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll()
         {
             //var restaurants = await _restaurantsService.GetAllRestaurants();
             var restaurants = await _mediator.Send(new GetAllRestaurantsQuery());
@@ -39,33 +42,39 @@ namespace Restaurants.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteRestaurant([FromRoute] int id)
         {
-            var isDeleted = await _mediator.Send(new DeleteRestaurantCommand(id));
+            await _mediator.Send(new DeleteRestaurantCommand(id));
 
-            if (isDeleted)
-            {
-                return NoContent();
-            }
+            //var isDeleted = await _mediator.Send(new DeleteRestaurantCommand(id));
+
+            //if (isDeleted)
+            //{
+            //    return NoContent();
+            //}
 
             return NotFound();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        public async Task<ActionResult<RestaurantDto?>> GetById([FromRoute] int id)
         {
             //var restaurant = await _restaurantsService.GetById(id);
             var restaurant = await _mediator.Send(new GetRestaurantByIdQuery(id));
 
-            if (restaurant is null)
-            {
-                return NotFound();
-            }
+            //Handling by middleware
+            //if (restaurant is null)
+            //{
+            //    return NotFound();
+            //}
 
             return Ok(restaurant);
         }
 
         [HttpPost]
+        [SwaggerRequestExample(typeof(CreateRestaurantCommand), typeof(CreateRestaurantExample))]
         //public async Task<IActionResult> CreateRestaurant([FromBody] CreateRestaurantDto createRestaurantDto)
         public async Task<IActionResult> CreateRestaurant([FromBody] CreateRestaurantCommand command)
         {
@@ -77,77 +86,30 @@ namespace Restaurants.API.Controllers
         }
 
         [HttpPatch("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> UpdateById([FromRoute] int id, [FromBody] UpdateRestaurantCommand command)
         {
             command.Id = id;
 
-            //return Ok(command);
+            await _mediator.Send(command);
 
-            var isUpdated = await _mediator.Send(command);
+            return NoContent();
 
-            if (isUpdated)
-            {
-                return NoContent();
-            }
+            //var isUpdated = await _mediator.Send(command);
 
-            return NotFound();
+            //if (isUpdated)
+            //{
+            //    return NoContent();
+            //}
         }
 
-        //[HttpGet("seed")]
-        //public async Task<IActionResult> SeedRestaurants()
-        //{
-        //    //var restaurants = await _restaurantsService.GetAllRestaurants();
-        //    var restaurants = await _mediator.Send(new SeedRestaurantsQuery());
-        //    return Ok(restaurants);
-        //}
-
-        //[HttpPost("seed")]
-        //public async Task<IActionResult> SeedRestaurants([FromForm] IFormFile file)
-        //{
-        //    if (file == null || file.Length == 0)
-        //    {
-        //        return BadRequest("No file uploaded or file is empty.");
-        //    }
-
-        //    // Read the file's content
-        //    string jsonData;
-        //    using (var streamReader = new StreamReader(file.OpenReadStream()))
-        //    {
-        //        jsonData = await streamReader.ReadToEndAsync();
-        //    }
-
-        //    // Deserialize the JSON content into Restaurant entities
-        //    var restaurants = JsonSerializer.Deserialize<IEnumerable<RestaurantDto>>(jsonData, new JsonSerializerOptions
-        //    {
-        //        PropertyNameCaseInsensitive = true
-        //    });
-
-        //    if (restaurants == null)
-        //    {
-        //        return BadRequest("Invalid JSON data.");
-        //    }
-
-        //    // Send the list of restaurants to the mediator for seeding
-        //    var result = await _mediator.Send(new SeedRestaurantsCommand { RestaurantsDtos = restaurants });
-
-        //    if (result)
-        //    {
-        //        return Ok("Database seeded successfully.");
-        //    }
-
-        //    return BadRequest("Failed to seed database.");
-        //}
-
         [HttpPost("seed")]
-        public async Task<IActionResult> SeedRestaurants([FromForm] IFormFile file)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> SeedRestaurants([FromForm] SeedRestaurantsCommand command)
         {
-            if (file == null || file.Length == 0)
-            {
-                return BadRequest("No file uploaded or the file is empty.");
-            }
-
             // Delegate file handling and seeding logic to the service/command handler
-            var result = await _mediator.Send(new SeedRestaurantsCommand { File = file });
+            var result = await _mediator.Send(command);
 
             if (result)
             {
@@ -156,6 +118,26 @@ namespace Restaurants.API.Controllers
 
             return BadRequest("Failed to seed the database.");
         }
+
+        //[HttpPost("seed")]
+        //[Consumes("multipart/form-data")]
+        //public async Task<IActionResult> SeedRestaurants([FromForm] IFormFile file)
+        //{
+        //    if (file == null || file.Length == 0)
+        //    {
+        //        return BadRequest("No file uploaded or the file is empty.");
+        //    }
+
+        //    // Delegate file handling and seeding logic to the service/command handler
+        //    var result = await _mediator.Send(new SeedRestaurantsCommand { File = file });
+
+        //    if (result)
+        //    {
+        //        return Ok("Database seeded successfully.");
+        //    }
+
+        //    return BadRequest("Failed to seed the database.");
+        //}
 
     }
 }

@@ -22,7 +22,7 @@ namespace Restaurants.Application.Restaurants.Commands.CreateRestaurant
 
         public async Task<int> Handle(CreateRestaurantCommand request, CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Create restaurant");
+            _logger.LogInformation("Create restaurant - {@RestaurantData}", request);
 
             var restaurant = _mapper.Map<Restaurant>(request);
 

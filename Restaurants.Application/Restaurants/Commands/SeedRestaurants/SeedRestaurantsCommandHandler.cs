@@ -24,6 +24,11 @@ public class SeedRestaurantsCommandHandler : IRequestHandler<SeedRestaurantsComm
 
     public async Task<bool> Handle(SeedRestaurantsCommand request, CancellationToken cancellationToken)
     {
+        if (request.File == null || request.File.Length == 0)
+        {
+            return false;
+        }
+
         // Initialize a buffer to read the file in chunks
         var buffer = new byte[8192]; // 8 KB chunks
         var sb = new StringBuilder(); // For collecting chunks of data
